@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtSqlTestClass</class>
+ <widget class="QMainWindow" name="QtSqlTestClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>695</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>232</red>
+        <green>227</green>
+        <blue>222</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>232</red>
+        <green>227</green>
+        <blue>222</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>232</red>
+        <green>227</green>
+        <blue>222</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>232</red>
+        <green>227</green>
+        <blue>222</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>QtSqlTest</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>661</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>表操作</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>选择表：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cmbTables">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>30</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnShowAll">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>30</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>显示全部数据</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>561</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>查询</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <widget class="QLabel" name="lblRecord">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>48</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>表字段：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbRecord">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>181</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblKey">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>关键字：</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editKey">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>30</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnQuery">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>75</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>修改</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>7</x>
+        <y>20</y>
+        <width>320</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btnAdd">
+         <property name="text">
+          <string>添加纪录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDelete">
+         <property name="text">
+          <string>删除记录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSubmit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>提交更改</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRevert">
+         <property name="text">
+          <string>撤销更改</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>695</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>db</string>
+    </property>
+    <addaction name="act_open"/>
+    <addaction name="act_Close"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuExcel">
+    <property name="title">
+     <string>excel</string>
+    </property>
+    <addaction name="actionImport"/>
+    <addaction name="actionExport"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExcel"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="actionSubmit">
+   <property name="text">
+    <string>Submit</string>
+   </property>
+  </action>
+  <action name="actionRevert">
+   <property name="text">
+    <string>Revert</string>
+   </property>
+  </action>
+  <action name="actionAdd_recourd">
+   <property name="text">
+    <string>Add recourd</string>
+   </property>
+  </action>
+  <action name="actionRemove_record">
+   <property name="text">
+    <string>Remove record</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>update</string>
+   </property>
+  </action>
+  <action name="act_open">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="act_Close">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>import</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>export</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qtsqltest.qrc"/>
+ </resources>
+ <connections/>
+</ui>
